@@ -11,7 +11,7 @@ export class TasksService {
         private prismaService: PrismaService
     ){}
 
-    async getAll(){
+    async getAll(): Promise<Task[]>{
         return this.prismaService.task.findMany();
     }
 
